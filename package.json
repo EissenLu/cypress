@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/EissenLu/cypress/issues"
   },
-  "homepage": "https://github.com/EissenLu/cypress#readme"
+  "homepage": "https://github.com/EissenLu/cypress#readme",
+  "devDependencies": {
+    "cypress": "^11.0.1"
+  }
 }
