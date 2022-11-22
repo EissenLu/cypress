@@ -69,6 +69,30 @@ describe('Demonstration der Funktionen ', () => {
         cy.wait(800)
     })
 
+    it('Werte auslesen', ()=>{
+        cy.visit('/example.html')
+
+        cy.get('.card-body')
+            .find('h1')
+            .eq(1)
+            .invoke('text')
+            .then(smaller =>{
+                const firstPrice = parseInt(smaller.slice(1,3))
+                cy.log(firstPrice)
+                cy.pause()
+                cy.get('.card-body')
+                    .find('h1')
+                    .eq(2)
+                    .invoke('text')
+                    .then(bigger =>{
+                        const secondPrice = parseInt(bigger.slice(1,3))
+                        cy.log(secondPrice)
+                        cy.pause()
+                        expect(secondPrice).to.be.gte(firstPrice)
+            })
+            })
+    })
+
     afterEach('', ()=>{
 
     })
