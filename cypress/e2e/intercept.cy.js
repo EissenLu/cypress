@@ -33,7 +33,7 @@ describe('Intercept', () => {
         
     })
 
-    it('Test5', ()=>{
-        
+    it('Fremde Website', ()=>{
+        cy.get('#feature3').find('a').click()
     })
 })
