@@ -2,12 +2,10 @@ describe('Demonstration der Funktionen ', () => {
     
     before(()=>{
         cy.visit('/login.html')
-        cy.pause()
     })
 
     beforeEach(()=>{
         cy.visit('')
-        cy.pause()
     })
 
     it('Elemente nach Elementnamen auswählen', ()=>{
@@ -46,7 +44,6 @@ describe('Demonstration der Funktionen ', () => {
 
     it('Custom-Commands erstellen', () =>{
         cy.header()
-        cy.pause()
 
         cy.get('#login')
             .click()
@@ -54,7 +51,6 @@ describe('Demonstration der Funktionen ', () => {
             .should('include', '/login.html')
     
         cy.header()
-        cy.pause()
 
     })
 
